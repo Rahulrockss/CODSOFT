@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans:wght@700&family=PT+Serif:wght@700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
 .logo {
     margin-left: 50px;
     color: rgb(222, 208, 191);
@@ -68,7 +73,7 @@ nav {
 
 }
 
-img {
+.image img {
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
     height: 30rem;
     width: 25rem;
@@ -122,25 +127,29 @@ img {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    height: 98vh;
 
 }
 
-.circular--square {
+.about-img img{
     padding-bottom: 20%;
-    max-width: 630px;
-    height: 30rem;
     margin-left: 50px;
     margin-top: 40px;
-    border-radius: 0.002px;
-    /* height: 15rem;
-    width: 15rem; */
-    filter: drop-shadow(-1px 2px 2px rgba(50, 50, 0, 0.5));
+    border-radius: 2px;
+    margin-bottom: 230px;
+    width: 25rem; 
+    clip-path: circle(50% at 50% 50%);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
 }
-
+/* .about-img img:hover{
+    border-radius:10px solid #07e363;
+    color: green;
+    box-shadow: 0 0 2px green;
+} */
 .about-text h2 {
-    font-size: 60px;
+    font-size: 50px;
 }
-
 .about-text {
     padding-bottom: 30%;
     margin-right: 30px;
@@ -155,45 +164,128 @@ img {
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     font-weight: 100;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .about-text h3 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 10px 0 25px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-box{
+   display: inline-block; 
+   padding: 8px 10px;
+   margin:10px 0px; 
+   background:rgb(211, 112, 112);
+   border-radius:4px;
+   font-size: 16px;
+   color:#0f1111;
+   border: solid 2px black;
+   /* letter-spacing: 1px; */
+   text-decoration: none;
+   font-weight: 600;
+   /* opacity: 0; */
+   animation: slideTop 1s ease forwards;
+   animation-delay: 2s;
+   
+} 
 .home-sci a:hover {
     background: #b4d4cf;
     color: #0f1111;
     box-shadow: 0 0 20px #a98c8c;
 
+}
+.section-info h1{
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    font-size: 50px;
+}
+#skills{
+    padding: 100px 50px;
+    background: url(img2.png);
+    background-size: cover;
+    /* color: white; */
+    
+    
+}
+#skills p{
+    color:white;
+    font-size: 20px;
+    opacity: 100;
+}
+.skills-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(45,52,54);
+    padding: 50px;
+}
+.skills-left-col{
+    flex-basis: 50%;
+    text-align: justify;
+
+}
+.skills-right-col{
+    flex-basis: 50%;
+    
+}
+/* progress{
+    width: 80%;
+    /* background-color: #07e363; */
+    /* border-radius: 50px; */
+    /* border: solid 2px black; */
+ 
+
+progress{
+    width: 80%;
+    height: 20px;
+    /* border: 2px solid black;
+    border-radius: 79px; */
+ }
+ progress::-webkit-progress-bar {
+    background-color: gray;
+ }
+ progress::-webkit-progress-value {
+    background-color:#0A7AA3;
+ }
+.progress-div{
+    width:70%;
+    margin: auto;
+}
+.progress-div p{
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-left: 80px;
+    text-align: justify;
+}
+#projects {
+    /* text-align: center; */
+    /* padding: 20px 0; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+
+  
+  .project img {
+    width: 25rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .project p{
+    margin-top: 1rem;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+  }
+footer{
+    background: rgb(45,52,54);
+    color: white;
+    height: 2rem;
 }
